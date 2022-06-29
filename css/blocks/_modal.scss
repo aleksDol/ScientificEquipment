@@ -1,0 +1,128 @@
+.modal{
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+   
+    background-color:fade-out($color: $gray, $amount: 0.1);
+}
+
+.modal__content{
+    width: 360px;
+    height: 725px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    padding-top: 110px;
+    padding-bottom: 61px;
+
+    position: relative;
+
+}
+
+.modal__tittle{
+    text-align: center;
+
+    font-family: 'Rubik';
+    font-weight: 700;
+    font-size: 20px;
+
+    color: $black;
+
+    margin-bottom: 57px;
+    &>span{
+        color: $green;
+    }
+}
+
+.inp{
+    width: 100%;
+    box-shadow: 0px 4px 18px rgba(79, 86, 101, 0.1);
+    border-radius: 10px;
+    border: none;
+    background-color: white;
+    margin-bottom: 20px;
+ 
+&::placeholder{
+    font-family: 'Rubik';
+    font-weight: 400;
+    font-size: 16px;
+    padding-left: 10px;
+    color: #B9BBC1;
+}
+    &:not(:last-child){
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+.modal__close-btn{
+    position: absolute;
+     top: 25px;
+     right: 25px;
+}
+
+.modal__label{
+    margin-bottom: 8px;
+
+    font-family: 'Rubik';
+    font-weight: 400;
+    font-size: 16px;
+    color: #4F5665;
+    & span{
+        color: red;
+    }
+}
+.modal__input-message{
+    height: 132px;
+    resize: none;
+}
+.input_wrapper{
+    display: flex;
+    margin-bottom: 26px;
+}
+
+.modal__input-btn{
+    padding-top: 21px;
+    padding-bottom: 21px;
+
+    font-family: 'Rubik';
+    font-weight: 700;
+    font-size: 17px;
+    text-align: center;
+    width: 100%;
+    color: #EAEAEA;
+
+    background-color: #D3D3D3;
+
+}
+
+#input_checkbox{
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    margin-right: 12px;
+}
+
+.modal__lable-text{
+    font-family: 'Rubik';
+    font-weight: 400;
+    font-size: 12px;
+
+    color: #B9BBC1;
+
+    & span{
+        color: $green;
+        font-weight: 700;
+    }
+}

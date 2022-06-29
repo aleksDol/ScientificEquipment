@@ -1,0 +1,45 @@
+.additional-products{
+    padding-top: 60px;
+    padding-bottom: 125px;
+}
+
+.additional-products__card-folder{
+    padding-top: 91px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+   
+}
+.additional-products__card{
+    display: flex;
+    &:not(:last-child){
+        padding-right: 49px;
+        border-right: 1.5px solid $lite-white;
+    }
+    
+
+    &-tittle{
+        font-family: 'Rubik';
+        font-weight: 500;
+        font-size: 19px;
+        color: $black;
+        margin-bottom: 12px;
+        }
+
+    &-text{
+        margin-bottom: 45px;
+        font-family: 'Rubik';
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 25px;
+        color: $gray;
+
+    }
+
+    &-btn{
+        color: $green;
+        border: 2px solid $green;
+        padding: 20px 117px;
+
+    }
+}
+

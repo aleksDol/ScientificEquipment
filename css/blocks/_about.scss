@@ -1,0 +1,27 @@
+.about{
+    padding-top: 110px;
+    padding-bottom: 120px;
+}
+.about__inner{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 140px;
+    row-gap: 180px;
+}
+
+.about__content{
+
+
+    &-tittle{
+        margin-bottom: 16px;
+
+    }
+    &-text{
+        font-family: 'Rubik';
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 25px;
+        color: $black;
+    }
+}

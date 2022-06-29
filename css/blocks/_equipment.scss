@@ -1,0 +1,55 @@
+.equipment{
+    padding-top: 111px;
+    padding-bottom: 150px;
+}
+
+.equipment__tittle{
+    margin-bottom: 90px;
+}
+
+.equipment__cards-fold{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: auto;
+}
+.equipment__card{
+    display: flex;
+    padding-right: 49px;
+    padding-bottom: 118px;
+}
+
+.equipment__card--not-padding{
+    padding-right: 0px;
+}
+
+.equipment__content{
+    max-width: 310px;
+    margin-left: 15px;
+
+    &-tittle{
+        font-family: 'Rubik';
+        font-weight: 500;
+        font-size: 19px;
+        margin-bottom: 12px;
+        color: $black;
+    }
+
+    &-text{
+        font-family: 'Rubik';
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 25px;
+        margin-bottom: 22px;
+
+    }
+
+    &-btn{
+        font-family: 'Rubik';
+        font-weight: 700;
+        font-size: 17px;
+        color: $green;
+        padding: 20px 118px;
+        border: 2px solid $green;
+
+    }
+}

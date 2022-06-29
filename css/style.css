@@ -1,0 +1,823 @@
+@charset "UTF-8";
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  width: 100%;
+  font-family: 'Rubik', sans-serif;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.container {
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.tittle {
+  font-family: 'Rubik';
+  font-weight: 500;
+  font-size: 35px;
+  color: #0B132A;
+}
+
+.btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 10px;
+  font-family: 'Rubik';
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.header__inner {
+  padding-top: 28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav-link {
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 16px;
+  color: #0B132A;
+}
+
+.nav-link:not(:last-child) {
+  margin-right: 30px;
+}
+
+.header__lagueges {
+  margin-left: 18px;
+  background-color: #147E45;
+  -webkit-box-shadow: 0px 4px 20px rgba(13, 77, 42, 0.33);
+          box-shadow: 0px 4px 20px rgba(13, 77, 42, 0.33);
+  border-radius: 4px;
+  padding: 5.6px 8px;
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+.lan-opt {
+  border-radius: 4px;
+}
+
+.intro {
+  padding-top: 130px;
+  padding-bottom: 90px;
+}
+
+.intro__inner {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+.intro__photo-fold {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.intro__content-tittle {
+  margin-bottom: 15px;
+}
+
+.intro__content-subtittle {
+  font-family: 'Rubik';
+  font-weight: 500;
+  font-size: 22px;
+  color: #0B132A;
+  margin-bottom: 15px;
+}
+
+.intro__content-text {
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 25px;
+  color: #0B132A;
+  margin-bottom: 30px;
+}
+
+.intro__content-list {
+  padding-bottom: 24px;
+}
+
+.content-list {
+  list-style-image: none;
+  list-style-image: url("/images/list-style.png");
+  list-style-position: inside;
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 17px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content-list:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.intro__content-btn {
+  background-color: #147E45;
+  padding: 20px 118px;
+  color: #FFFFFF;
+}
+
+.equipment {
+  padding-top: 111px;
+  padding-bottom: 150px;
+}
+
+.equipment__tittle {
+  margin-bottom: 90px;
+}
+
+.equipment__cards-fold {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+}
+
+.equipment__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 49px;
+  padding-bottom: 118px;
+}
+
+.equipment__card--not-padding {
+  padding-right: 0px;
+}
+
+.equipment__content {
+  max-width: 310px;
+  margin-left: 15px;
+}
+
+.equipment__content-tittle {
+  font-family: 'Rubik';
+  font-weight: 500;
+  font-size: 19px;
+  margin-bottom: 12px;
+  color: #0B132A;
+}
+
+.equipment__content-text {
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 25px;
+  margin-bottom: 22px;
+}
+
+.equipment__content-btn {
+  font-family: 'Rubik';
+  font-weight: 700;
+  font-size: 17px;
+  color: #147E45;
+  padding: 20px 118px;
+  border: 2px solid #147E45;
+}
+
+.about {
+  padding-top: 110px;
+  padding-bottom: 120px;
+}
+
+.about__inner {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  -webkit-column-gap: 140px;
+          column-gap: 140px;
+  row-gap: 180px;
+}
+
+.about__content-tittle {
+  margin-bottom: 16px;
+}
+
+.about__content-text {
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 25px;
+  color: #0B132A;
+}
+
+.drill {
+  padding-top: 130px;
+  padding-bottom: 90px;
+}
+
+.drill__inner {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+.drill__photo-fold {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.drill__content-tittle {
+  margin-bottom: 15px;
+}
+
+.drill__content-subtittle {
+  font-family: 'Rubik';
+  font-weight: 500;
+  font-size: 22px;
+  color: #0B132A;
+  margin-bottom: 15px;
+}
+
+.drill__content-text {
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 25px;
+  color: #0B132A;
+  margin-bottom: 30px;
+}
+
+.drill__content-list {
+  padding-bottom: 24px;
+}
+
+.drill-list {
+  list-style-image: none;
+  list-style-image: url("/images/list-style.png");
+  list-style-position: inside;
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 17px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.drill-list:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.drill__content-btn {
+  background-color: #147E45;
+  padding: 20px 118px;
+  color: #FFFFFF;
+}
+
+.drill-bit {
+  padding-top: 130px;
+  padding-bottom: 90px;
+}
+
+.drill-bit__inner {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+.drill-bit__photo-fold {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.drill-bit__content-tittle {
+  margin-bottom: 15px;
+}
+
+.drill-bit__content-subtittle {
+  font-family: 'Rubik';
+  font-weight: 500;
+  font-size: 22px;
+  color: #0B132A;
+  margin-bottom: 15px;
+}
+
+.drill-bit__content-text {
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 25px;
+  color: #0B132A;
+  margin-bottom: 30px;
+}
+
+.drill-bit__content-list {
+  padding-bottom: 24px;
+}
+
+.drill-bit-list {
+  list-style-image: none;
+  list-style-image: url("/images/list-style.png");
+  list-style-position: inside;
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 17px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.drill-bit-list:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.drill-bit__content-btn {
+  background-color: #147E45;
+  padding: 20px 118px;
+  color: #FFFFFF;
+}
+
+.pump {
+  padding-top: 130px;
+  padding-bottom: 90px;
+}
+
+.pump__inner {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+.pump__photo-fold {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.pump__content-tittle {
+  margin-bottom: 15px;
+}
+
+.pump__content-subtittle {
+  font-family: 'Rubik';
+  font-weight: 500;
+  font-size: 22px;
+  color: #0B132A;
+  margin-bottom: 15px;
+}
+
+.pump__content-text {
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 25px;
+  color: #0B132A;
+  margin-bottom: 30px;
+}
+
+.pump__content-list {
+  padding-bottom: 24px;
+}
+
+.pump-list {
+  list-style-image: none;
+  list-style-image: url("/images/list-style.png");
+  list-style-position: inside;
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 17px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pump-list:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.pump__content-btn {
+  background-color: #147E45;
+  padding: 20px 118px;
+  color: #FFFFFF;
+}
+
+.activity {
+  padding-top: 90px;
+  padding-bottom: 60px;
+}
+
+.activity__inner {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  -webkit-column-gap: 100px;
+          column-gap: 100px;
+}
+
+.activity__content-tittle {
+  margin-bottom: 15px;
+}
+
+.activity__content-text {
+  margin-bottom: 40px;
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 16px;
+  color: #0B132A;
+  line-height: 30px;
+}
+
+.activity__content-btn {
+  background-color: #147E45;
+  color: #FFFFFF;
+  padding: 20px 70px;
+}
+
+.additional-products {
+  padding-top: 60px;
+  padding-bottom: 125px;
+}
+
+.additional-products__card-folder {
+  padding-top: 91px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.additional-products__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.additional-products__card:not(:last-child) {
+  padding-right: 49px;
+  border-right: 1.5px solid #EEEFF2;
+}
+
+.additional-products__card-tittle {
+  font-family: 'Rubik';
+  font-weight: 500;
+  font-size: 19px;
+  color: #0B132A;
+  margin-bottom: 12px;
+}
+
+.additional-products__card-text {
+  margin-bottom: 45px;
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 25px;
+  color: #4F5665;
+}
+
+.additional-products__card-btn {
+  color: #147E45;
+  border: 2px solid #147E45;
+  padding: 20px 117px;
+}
+
+.contact {
+  padding-bottom: 124px;
+}
+
+.contact__tittle {
+  margin-bottom: 13px;
+}
+
+.contact__text {
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 17px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact__btn {
+  padding: 20px 70px;
+  color: #FFFFFF;
+  background-color: #147E45;
+}
+
+.contact__panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 4px 63px rgba(165, 165, 165, 0.25);
+          box-shadow: 0px 4px 63px rgba(165, 165, 165, 0.25);
+  padding-top: 65px;
+  padding-bottom: 65px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.footer {
+  padding-bottom: 40px;
+}
+
+.footer__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__info {
+  position: relative;
+}
+
+.footer__info-author {
+  position: absolute;
+  bottom: 0;
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 16px;
+  color: #4F5665;
+}
+
+.footer__nav-link {
+  display: block;
+  font-family: 'Rubik';
+  font-weight: 500;
+  font-size: 18px;
+  color: #0B132A;
+}
+
+.footer__nav-link:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.foter__contact-link {
+  display: block;
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 16px;
+  color: #0B132A;
+}
+
+.foter__contact-link span {
+  color: #147E45;
+}
+
+.foter__contact-link:not(:last-child) {
+  margin-bottom: 26px;
+}
+
+.modal {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: rgba(79, 86, 101, 0.9);
+}
+
+.modal__content {
+  width: 360px;
+  height: 725px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  padding-top: 110px;
+  padding-bottom: 61px;
+  position: relative;
+}
+
+.modal__tittle {
+  text-align: center;
+  font-family: 'Rubik';
+  font-weight: 700;
+  font-size: 20px;
+  color: #0B132A;
+  margin-bottom: 57px;
+}
+
+.modal__tittle > span {
+  color: #147E45;
+}
+
+.inp {
+  width: 100%;
+  -webkit-box-shadow: 0px 4px 18px rgba(79, 86, 101, 0.1);
+          box-shadow: 0px 4px 18px rgba(79, 86, 101, 0.1);
+  border-radius: 10px;
+  border: none;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+.inp::-webkit-input-placeholder {
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 16px;
+  padding-left: 10px;
+  color: #B9BBC1;
+}
+
+.inp:-ms-input-placeholder {
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 16px;
+  padding-left: 10px;
+  color: #B9BBC1;
+}
+
+.inp::-ms-input-placeholder {
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 16px;
+  padding-left: 10px;
+  color: #B9BBC1;
+}
+
+.inp::placeholder {
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 16px;
+  padding-left: 10px;
+  color: #B9BBC1;
+}
+
+.inp:not(:last-child) {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.modal__close-btn {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
+
+.modal__label {
+  margin-bottom: 8px;
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 16px;
+  color: #4F5665;
+}
+
+.modal__label span {
+  color: red;
+}
+
+.modal__input-message {
+  height: 132px;
+  resize: none;
+}
+
+.input_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 26px;
+}
+
+.modal__input-btn {
+  padding-top: 21px;
+  padding-bottom: 21px;
+  font-family: 'Rubik';
+  font-weight: 700;
+  font-size: 17px;
+  text-align: center;
+  width: 100%;
+  color: #EAEAEA;
+  background-color: #D3D3D3;
+}
+
+#input_checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  margin-right: 12px;
+}
+
+.modal__lable-text {
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 12px;
+  color: #B9BBC1;
+}
+
+.modal__lable-text span {
+  color: #147E45;
+  font-weight: 700;
+}
+/*# sourceMappingURL=style.css.map */
